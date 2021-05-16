@@ -41,7 +41,7 @@
   /* float: left; */
   display: inline-block;
 }
-.register {
+.submit {
   background-color: #3498db;
   color: white;
   border: 0;
@@ -56,36 +56,18 @@
 .float {
   float: left;
 }
-.firstname {
-  width: 200px;
-
-  border: 1px solid black;
-  padding: 5px;
-  background-color: rgb(126, 126, 243);
-}
-.lastname {
-  width: 200px;
-
-  border: 1px solid black;
-  padding: 5px;
-  background-color: rgb(126, 126, 243);
-}
-.age {
-  width: 200px;
-
-  border: 1px solid black;
-  padding: 5px;
-  background-color: rgb(126, 126, 243);
-}
-.gender {
-  width: 200px;
-
-  border: 1px solid black;
-  padding: 5px;
-  background-color: rgb(126, 126, 243);
-}
 
 .down {
   padding: 5px;
   width: 200px;
+}
+
+.tableCenter {
+  margin: auto;
+  width: 80%;
+}
+
+.tableHead {
+  background-color: #247bb4;
+  color: antiquewhite;
 }

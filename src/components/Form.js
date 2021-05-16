@@ -10,6 +10,7 @@ class Form extends Component {
       age: "",
       gender: "",
     },
+
     users: [],
   };
 
@@ -58,18 +59,27 @@ class Form extends Component {
         gender: this.state.data.gender == "",
       },
     });
+    return (
+      this.state.data.firstname == "" ||
+      this.state.data.lastname == "" ||
+      this.state.data.age == "" ||
+      this.state.data.gender == ""
+    );
   };
-  submit = (e) => {
+  onSubmit = (e) => {
     e.preventDefault();
 
-    if (!this.validate()) return;
+    if (this.validate()) return;
 
     this.setState({
       users: [...this.state.users, this.state.data],
       data: { firstname: "", lastname: "", age: "", gender: "" },
     });
 
-    console.log(this.state.data);
+    this.props.updateUsers(this.state.data);
+    this.setState({
+      data: { firstname: "", lastname: "", age: "", gender: "" },
+    });
   };
 
   render() {
@@ -165,32 +175,11 @@ class Form extends Component {
             </div>
           </div>
           <div>
-            <button className="register" onClick={this.submit}>
+            <button className="submit" onClick={this.onSubmit}>
               Submit
             </button>
           </div>
         </form>
-        <div className="table">
-          <form>
-            <table align="center">
-              <tr>
-                <th className="firstname">Firstname</th>
-                <th className="lastname">Lastname</th>
-                <th className="age">Age</th>
-                <th className="gender">Gender</th>
-              </tr>
-              {this.state.users.map((person) => (
-                <tr>
-                  <td>{person.firstname}</td>
-                  <td>{person.lastname}</td>
-                  <td>{person.age}</td>
-                  <td>{person.gender}</td>
-                </tr>
-              ))}
-              <tr>{}</tr>
-            </table>
-          </form>
-        </div>
       </div>
     );
   }
