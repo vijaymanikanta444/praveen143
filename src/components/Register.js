@@ -25,12 +25,10 @@ export class Register extends Component {
       },
     ],
     data : {
-      
         firstname: '',
         lastname: '',
         age: '',
         gender: '',
-      
     },
     errors: {
       firstname: '',
@@ -41,12 +39,10 @@ export class Register extends Component {
   };
 
   edit = (id) => {
-    console.log(this.state.users[id], id);
     this.setState({
-      currentId: this.state.users[id],
       data: this.state.users[id],
     });
-    console.log(this.state.data);
+   console.log(this.state.users[id])
   };
 
   delete = (id) => {

@@ -78,10 +78,10 @@ onChange = (e) => {
                           className="form-check-input"
                           type="radio"
                           name="gender"
-                          id="Male"
-                          value="Male"
+                          id="male"
+                          value="male"
                           onClick={this.onChange}
-                          checked={this.props.data.gender === 'Male'}
+                          checked={this.props.data.gender === 'male'}
                         />
                         <label>Male</label>
                       </div>
@@ -90,10 +90,10 @@ onChange = (e) => {
                           className="form-check-input"
                           type="radio"
                           name="gender"
-                          id="Female"
-                          value="Female"
+                          id="female"
+                          value="female"
                           onClick={this.onChange}
-                          checked={this.props.data.gender === 'Female'}
+                          checked={this.props.data.gender === 'female'}
                         />
                         <label>Female</label>
                       </div>
